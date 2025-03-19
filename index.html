@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Call</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <script src="Assets/JS/script.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">🔹 Video Call</div>
+        <div class="video-container">
+            <video id="localVideo" autoplay playsinline muted></video>
+            <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+        
+        <div class="device-selection">
+            <div class="select-container">
+                <label for="cameraSelect">Camera:</label>
+                <select id="cameraSelect"></select>
+            </div>
+            <div class="select-container">
+                <label for="microphoneSelect">Microphone:</label>
+                <select id="microphoneSelect"></select>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startCall"><span class="icon">📞</span> Start Call</button>
+            <button id="endCall" disabled><span class="icon">❌</span> End Call</button>
+        </div>
+        
+        <div class="info-panel">
+            <p>Share this link: <a id="roomLink" href="#" target="_blank">Generating...</a></p>
+            <p>Status: <span id="status">Ready</span></p>
+        </div>
+    </div>
+
+    <div id="permissionModal" class="modal">
+        <div class="modal-content">
+            <h3>Permission Request</h3>
+            <p>This app needs access to your camera and microphone to start the video call. Do you allow this?</p>
+            <div class="modal-buttons">
+                <button class="allow-btn" id="allowPermissions">Allow</button>
+                <button class="deny-btn" id="denyPermissions">Deny</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Call</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <script src="Assets/JS/script.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">🔹 Video Call</div>
+        <div class="video-container">
+            <video id="localVideo" autoplay playsinline muted></video>
+            <video id="remoteVideo" autoplay playsinline></video>
+        </div>
+        <div class="controls">
+            <button id="startCall"><span class="icon">📞</span> Start Call</button>
+            <button id="endCall" disabled><span class="icon">❌</span> End Call</button>
+        </div>
+        <div class="info-panel">
+            <p>Share this link: <a id="roomLink" target="_blank">Generating...</a></p>
+            <p>Status: <span id="status">Ready</span></p>
+        </div>
+    </div>
+
+    <div id="permissionModal" class="modal">
+        <div class="modal-content">
+            <h3>Permission Request</h3>
+            <p>This app needs access to your PC camera and microphone to start the video call. Do you allow this?</p>
+            <div class="modal-buttons">
+                <button class="allow-btn" id="allowPermissions">Allow</button>
+                <button class="deny-btn" id="denyPermissions">Deny</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
